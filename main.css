@@ -1,0 +1,25 @@
+/* imports */
+
+/* resets */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  height: 100vh;
+}
+
+.image {
+  background-image: url("./assets/dazai.png");
+  background-position: center;
+}
+
+.sign-up {
+  border: 1px solid lime;
+}
