@@ -4,12 +4,102 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./main.css" />
-    <title>Sign up</title>
+    <link rel="icon" type="image/x-icon" href="assets/dazai11.gif" />
+    <title>Dazai - Sign Up</title>
   </head>
   <body>
     <main>
-      <section class="image"></section>
-      <section class="sign-up"></section>
+      <section class="image">
+        <div class="title-display">
+          <img src="./assets/dazai11.gif" alt="dazai icon" />
+          <h1>Dazai</h1>
+        </div>
+      </section>
+      <section class="sign-up">
+        <div class="sign-up__header">
+          <h2 class="header--quote">
+            People exist to save themselves. You will understand that at the
+            moment of your death. <span>-Osamu Dazai</span>
+          </h2>
+          <p class="header--text">
+            Sign up <span>now</span> to join our agency!
+          </p>
+        </div>
+        <div class="sign-up__form">
+          <form action="https://httpbin.org/post" method="post">
+            <div class="form--inputs">
+              <div class="inputs">
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" id="first_name" required />
+              </div>
+              <div class="inputs">
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name" required />
+              </div>
+              <div class="inputs">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div class="inputs">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  minlength="11"
+                  maxlength="11"
+                  required
+                />
+              </div>
+              <div class="inputs">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  minlength="8"
+                  maxlength="32"
+                  required
+                  oninput="verifyPassword(this.value)"
+                />
+                <span class="errorMsg" id="passwordMsg"></span>
+              </div>
+              <div class="inputs">
+                <label
+                  for="password_confirmation"
+                  class="disabled"
+                  id="confirmationLabel"
+                  >Password Confirmation</label
+                >
+                <input
+                  type="password"
+                  name="password_confirmation"
+                  id="password_confirmation"
+                  oninput="confirmPassword(this.value)"
+                  required
+                  disabled
+                />
+
+                <span class="errorMsg" id="confirmationMsg"></span>
+              </div>
+            </div>
+            <div class="form--footer">
+              <button type="submit" id="createAcc">Create Account</button>
+              <p>
+                Already have an account?
+                <a
+                  href="https://www.theodinproject.com/dashboard"
+                  id="login"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Log In</a
+                >
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
+    <script src="./main.js"></script>
   </body>
 </html>
