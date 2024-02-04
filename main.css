@@ -34,6 +34,8 @@ main {
   position: relative;
   background-image: url("./assets/dazai.png");
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .image::before {
@@ -207,4 +209,27 @@ form {
 
 label.disabled {
   color: var(--disabled-color);
+}
+
+/* media queries */
+
+@media (max-width: 992px) {
+  .form--inputs {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 4fr;
+  }
+
+  .image {
+    background-image: url("./assets/dazailandscape.jpg");
+  }
+
+  .title-display {
+    bottom: 20px;
+  }
 }
